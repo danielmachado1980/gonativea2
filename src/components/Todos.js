@@ -1,20 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
     Text,
     View,
 } from 'react-native';
 import PropTypes from 'prop-types';
 
-export default class Todos extends Component {
-    
-    render(){
-        return ( 
-            <View>
-                <Text>{this.props.title}</Text>
-            </View>
-        );
-    }
-}
+const Todos = (props) => (
+  <View>
+      <Text>{props.title}</Text>
+  </View>
+)
 
 Todos.defaultProps = {
     title: 'Texto padrão.',
@@ -23,3 +18,5 @@ Todos.defaultProps = {
 Todos.propTypes = {
     title: PropTypes.string.isRequired,
 };
+
+export default Todos;
